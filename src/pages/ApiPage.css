@@ -1,0 +1,141 @@
+.api-page {
+  padding: 2rem 0;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.api-title {
+  color: #fff;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px rgba(227, 11, 93, 0.4);
+}
+
+.api-desc {
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.api-section {
+  background: rgba(27, 39, 53, 0.8);
+  border: 1px solid rgba(227, 11, 93, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.api-section h2 {
+  color: #FF1493;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.api-method {
+  display: inline-block;
+  background: rgba(227, 11, 93, 0.2);
+  color: #FF1493;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.api-post {
+  background: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+}
+
+.api-code-block {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.api-code-block code,
+.api-code-block pre {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  white-space: pre;
+}
+
+.api-products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.api-game-block {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.api-game-block h3 {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.api-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.api-table th {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.75rem;
+  text-align: left;
+  padding: 0.3rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.api-table td {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  padding: 0.3rem 0;
+}
+
+.api-methods-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.api-method-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.6rem 1rem;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+.api-method-name {
+  background: rgba(227, 11, 93, 0.2);
+  color: #FF1493;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  min-width: 60px;
+  text-align: center;
+}
+
+.api-method-desc {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 700px) {
+  .api-products-grid {
+    grid-template-columns: 1fr;
+  }
+}

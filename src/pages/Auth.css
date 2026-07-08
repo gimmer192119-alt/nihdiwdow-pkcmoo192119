@@ -1,0 +1,225 @@
+.auth-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+}
+
+.auth-card {
+  background: rgba(27, 39, 53, 0.8);
+  border: 1px solid rgba(227, 11, 93, 0.3);
+  border-radius: 16px;
+  padding: 2.5rem;
+  width: 360px;
+  text-align: center;
+}
+
+.auth-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(227, 11, 93, 0.1);
+  border: 2px solid #FF1493;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.auth-card h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.auth-member {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.auth-field {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.auth-field label {
+  display: block;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+}
+
+.auth-field input {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(227, 11, 93, 0.2);
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.auth-field input:focus {
+  border-color: #FF1493;
+}
+
+.auth-error {
+  color: #ff4444;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 0.7rem;
+  background: #E30B5D;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s;
+}
+
+.auth-btn:hover {
+  background: #FF1493;
+}
+
+.auth-logout {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 1rem;
+}
+
+.auth-logout:hover {
+  background: rgba(220, 20, 20, 0.2);
+  border-color: rgba(220, 20, 20, 0.4);
+}
+
+.auth-switch {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.9rem;
+  margin-top: 1.2rem;
+}
+
+.auth-switch span {
+  color: #FF1493;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.auth-switch span:hover {
+  text-decoration: underline;
+}
+
+/* Profile styles */
+.profile-card { width: 420px; }
+
+.profile-section {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  text-align: left;
+}
+
+.profile-balance {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.balance-label { color: rgba(255,255,255,0.5); font-size: 0.9rem; }
+.balance-value { color: #FF1493; font-weight: 700; font-size: 1.2rem; margin-left: auto; }
+
+.profile-btn-sm {
+  padding: 0.4rem 1rem;
+  background: #E30B5D;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.profile-btn-sm:hover { background: #FF1493; }
+
+.profile-api-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.api-label { color: rgba(255,255,255,0.5); font-size: 0.85rem; }
+
+.api-key-display {
+  background: rgba(0,0,0,0.3);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  color: #FF1493;
+  font-size: 0.8rem;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.copy-btn-sm {
+  background: rgba(227,11,93,0.2);
+  border: 1px solid rgba(227,11,93,0.3);
+  border-radius: 4px;
+  padding: 0.3rem;
+  color: #FF1493;
+  cursor: pointer;
+  display: flex;
+}
+
+.profile-btn-regen {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.profile-btn-regen:hover { background: rgba(255,255,255,0.1); }
+
+.auth-forgot {
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+}
+
+.auth-forgot a {
+  color: rgba(255,255,255,0.4);
+  text-decoration: underline;
+}
+
+.auth-forgot a:hover { color: #FF1493; }
+
+.admin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: rgba(227, 11, 93, 0.15);
+  border: 1px solid rgba(227, 11, 93, 0.3);
+  border-radius: 6px;
+  padding: 0.2rem 0.6rem;
+  color: #FF1493;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}

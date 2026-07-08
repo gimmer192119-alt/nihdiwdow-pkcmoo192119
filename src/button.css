@@ -1,0 +1,74 @@
+.button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0.6em 2em;
+  border: var(--raspberry) solid 0.15em;
+  border-radius: 0.25em;
+  color: var(--raspberry);
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border 300ms, color 300ms;
+  user-select: none;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.button p {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  white-space: nowrap;
+}
+
+.button:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.button:active {
+  border-color: var(--raspberry-light);
+}
+
+.button::after, .button::before {
+  content: "";
+  position: absolute;
+  width: 9em;
+  aspect-ratio: 1;
+  background: var(--raspberry);
+  opacity: 0.2;
+  border-radius: 50%;
+  transition: transform 500ms, background 300ms;
+}
+
+.button::before {
+  left: 0;
+  transform: translateX(-8em);
+}
+
+.button::after {
+  right: 0;
+  transform: translateX(8em);
+}
+
+.button:hover::before {
+  transform: translateX(-1em);
+}
+
+.button:hover::after {
+  transform: translateX(1em);
+}
+
+.button:hover {
+  background: var(--raspberry);
+}
+
+.button:active::before,
+.button:active::after {
+  background: var(--graphite-light);
+}

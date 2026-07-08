@@ -1,0 +1,280 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.modal-content {
+  background: rgba(27, 39, 53, 0.95);
+  border: 1px solid rgba(227, 11, 93, 0.3);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 380px;
+  position: relative;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.modal-close:hover { color: #FF1493; }
+
+.modal-header h2 {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.modal-product {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal-product-name { color: #fff; font-weight: 600; font-size: 1.1rem; }
+.modal-product-game { color: rgba(255, 255, 255, 0.5); font-size: 0.85rem; }
+.modal-product-desc { color: rgba(255, 255, 255, 0.4); font-size: 0.8rem; margin-top: 0.2rem; }
+.modal-product-price { color: #FF1493; font-weight: 700; font-size: 1.3rem; margin-top: 0.3rem; }
+
+/* Payment Methods */
+.payment-methods h3 {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.payment-option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(227, 11, 93, 0.15);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-bottom: 0.8rem;
+  text-align: left;
+}
+
+.payment-option:hover {
+  border-color: #FF1493;
+  background: rgba(227, 11, 93, 0.08);
+}
+
+.payment-logo { width: 48px; height: 48px; border-radius: 10px; object-fit: cover; }
+
+.payment-option-info { display: flex; flex-direction: column; gap: 0.2rem; }
+.payment-option-title { color: #fff; font-weight: 600; font-size: 1rem; }
+.payment-option-desc { color: rgba(255, 255, 255, 0.4); font-size: 0.8rem; }
+
+/* Confirm */
+.payment-confirm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.payment-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.payment-badge-logo { width: 32px; height: 32px; border-radius: 6px; object-fit: cover; }
+
+.payment-confirm-text {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Crypto */
+.crypto-currencies { display: flex; align-items: center; gap: 0.8rem; }
+.crypto-tags { display: flex; gap: 0.4rem; }
+.crypto-tag {
+  background: rgba(227, 11, 93, 0.15);
+  border: 1px solid rgba(227, 11, 93, 0.2);
+  border-radius: 6px;
+  padding: 0.2rem 0.5rem;
+  color: #FF1493;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Actions */
+.modal-actions { display: flex; gap: 0.8rem; margin-top: 0.5rem; }
+
+.modal-back-btn {
+  flex: 1;
+  padding: 0.7rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.modal-back-btn:hover { border-color: rgba(255, 255, 255, 0.3); color: #fff; }
+
+.modal-pay-btn {
+  flex: 2;
+  padding: 0.7rem;
+  background: #E30B5D;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.modal-pay-btn:hover { background: #FF1493; box-shadow: 0 0 20px rgba(227, 11, 93, 0.4); }
+.modal-pay-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.spin { animation: spin 1s linear infinite; }
+
+/* Status / Demo */
+.payment-status {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.payment-demo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.demo-title { color: #FF1493; font-weight: 600; font-size: 1.1rem; }
+.demo-text { color: rgba(255, 255, 255, 0.5); font-size: 0.9rem; }
+.demo-steps {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+  padding-left: 1.2rem;
+  line-height: 1.8;
+}
+.demo-steps a { color: #FF1493; text-decoration: underline; }
+.demo-steps code {
+  background: rgba(227, 11, 93, 0.15);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  color: #FF1493;
+}
+
+/* Payment flow */
+.payment-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.payment-flow h3 {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.full-width { width: 100%; }
+
+/* UID Section */
+.uid-section {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.uid-input-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.uid-input-row input {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(227, 11, 93, 0.2);
+  border-radius: 8px;
+  padding: 0.6rem 0.8rem;
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  font-family: monospace;
+}
+
+.uid-input-row input:focus { border-color: #FF1493; }
+
+.uid-check-btn {
+  padding: 0.6rem 1rem;
+  background: rgba(227, 11, 93, 0.2);
+  border: 1px solid rgba(227, 11, 93, 0.3);
+  border-radius: 8px;
+  color: #FF1493;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  white-space: nowrap;
+}
+
+.uid-check-btn:hover { background: rgba(227, 11, 93, 0.3); }
+.uid-check-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.uid-status {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.uid-valid { color: #22c55e; }
+.uid-invalid { color: #ff4444; }
